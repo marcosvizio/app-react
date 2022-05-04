@@ -1,8 +1,47 @@
-h1{
-    color: red;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-.app{
-    margin: 5px;
-    padding: 5px;
-    border: 2px solid blue;
+
+.gfonts {
+  font-family: 'Exo 2', sans-serif;
 }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: black;
+  padding: 20px;
+}
+
+.header__logo {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin-bottom: 0px;
+}
+
+.header__ul--li {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

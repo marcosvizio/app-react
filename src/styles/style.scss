@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.gfonts{
+    font-family: 'Exo 2', sans-serif;
+}
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background: black;
+    padding: 20px;
+    &__logo{
+        color : white;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    &__ul{
+        display: flex;
+        list-style: none;
+        margin-bottom: 0px;
+        &--li{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+    }
+}

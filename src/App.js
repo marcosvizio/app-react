@@ -1,7 +1,10 @@
-function App() {
+import Navbar from "./components/Header/Navbar";
+
+function App() {{
+  }
   return (
-    <div className="app">
-      <h1>Hola! Esta es mi primer aplicación.</h1>
+    <div className="app gfonts">
+      <Navbar />
     </div>
   );
 }
