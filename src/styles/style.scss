@@ -1,6 +1,6 @@
 *{
-    margin:0;
-    padding: 0;
+    margin:0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 .gfonts{
@@ -17,16 +17,29 @@
         color : white;
         font-weight: bold;
         text-decoration: none;
-    }
-    &__ul{
+    };
+    &__items{
         display: flex;
-        list-style: none;
-        margin-bottom: 0px;
-        &--li{
-            text-decoration: none;
+        &--ul{
+            display: flex;
+            list-style: none;
+            margin-bottom: auto;
+            &Link{
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                margin-right: 1rem;
+            }
+        }
+        &--cart{
+            margin-left: 2rem;
+            cursor: pointer;
             color: white;
             font-weight: bold;
-            margin-right: 1rem;
         }
     }
+}
+.cart__listContainer{
+        font-weight: bold;
+        font-size: 2rem;
 }
