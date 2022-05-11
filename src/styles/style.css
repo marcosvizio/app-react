@@ -9,6 +9,10 @@
   font-family: 'Exo 2', sans-serif;
 }
 
+body {
+  color: white;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,6 +64,21 @@
 
 .cart__listContainer {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.cart__listContainer--itemCount {
+  font-weight: bold;
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+.cart__listContainer--itemCountInput {
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0px 3px 0px 3px;
+  margin: 0px 5px 0px 5px;
 }
 /*# sourceMappingURL=style.css.map */

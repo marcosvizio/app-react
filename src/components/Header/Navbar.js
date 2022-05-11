@@ -12,7 +12,7 @@ export default function Navbar() {
               <li><a href="#" className="header__items--ulLink">Productos</a></li>
               <li><a href="#" className="header__items--ulLink">Nosotros</a></li>
             </ul>
-            <CartWidget count={1}/>
+            <CartWidget count="1"/>
           </div>
       </header>
     )

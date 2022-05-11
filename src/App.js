@@ -1,5 +1,6 @@
 import  Navbar  from "./components/Header/Navbar";
 import { ItemListContainer } from "./components/Cart/ItemListContainer";
+import { ItemCount } from "./components/Cart/ItemCount";
 
 function App() {{
   }

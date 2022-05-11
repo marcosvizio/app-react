@@ -6,6 +6,9 @@
 .gfonts{
     font-family: 'Exo 2', sans-serif;
 }
+body{
+    color: white;
+}
 .header{
     display: flex;
     flex-wrap: wrap;
@@ -41,5 +44,18 @@
 }
 .cart__listContainer{
         font-weight: bold;
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin: 10px;
+        &--itemCount{
+            font-weight: bold;
+            margin: 10px;
+            font-size: 1.5rem;
+            &Input{
+                font-weight: bold;
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 0px 3px 0px 3px;
+                margin: 0px 5px 0px 5px;
+            }
+        }
 }
