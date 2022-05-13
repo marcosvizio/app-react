@@ -8,6 +8,7 @@
 }
 body{
     color: white;
+    background-color: black;
 }
 .header{
     display: flex;
@@ -16,6 +17,9 @@ body{
     align-items: center;
     background: black;
     padding: 20px;
+    position: sticky;
+    z-index: 999;
+    top: 0;
     &__logo{
         color : white;
         font-weight: bold;
@@ -42,20 +46,32 @@ body{
         }
     }
 }
-.cart__listContainer{
+.itemListContainer{
         font-weight: bold;
         font-size: 1.5rem;
         margin: 10px;
-        &--itemCount{
+        &__itemCount{
             font-weight: bold;
-            margin: 10px;
+            margin: 1rem;
             font-size: 1.5rem;
-            &Input{
+            &--input{
                 font-weight: bold;
                 border: 1px solid black;
                 border-radius: 5px;
                 padding: 0px 3px 0px 3px;
                 margin: 0px 5px 0px 5px;
+            }
+        }
+        &__title{
+            font-weight: bold;
+            margin-left: 1rem;
+        }
+        &__items{
+            display: flex;
+            font-weight: bold;
+            &--card{
+                margin: 1rem;
+                justify-content: center;
             }
         }
 }

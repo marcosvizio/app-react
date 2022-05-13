@@ -13,10 +13,10 @@ export const ItemCount = ({initial, stock}) => {
         } 
     }
   return (
-    <div className='cart__listContainer--itemCount'>
-        <input type="button" value="+" className='cart__listContainer--itemCountInput' onClick={handlePlus}></input>
+    <div className='itemListContainer__itemCount'>
+        <input type="button" value="+" className='itemListContainer__itemCount--input' onClick={handlePlus}></input>
         {count}
-        <input type="button" value="-" className='cart__listContainer--itemCountInput' onClick={handleRest}></input>
+        <input type="button" value="-" className='itemListContainer__itemCount--input' onClick={handleRest}></input>
     </div>
   )
 }
