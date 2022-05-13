@@ -1,9 +1,7 @@
 import React from 'react'
 
 export const ItemCount = ({initial, stock}) => {
-    /* State Hook */
     const [count,setCount] = React.useState(initial)
-    /* Funciones Manejadoras */
     const handleRest = () => {
         if (count > 0) {
             setCount(count - 1)
