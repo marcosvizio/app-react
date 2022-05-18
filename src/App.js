@@ -1,11 +1,13 @@
-import  Navbar  from "./components/Header/Navbar";
+import  Navbar  from "./components/Navbar/Navbar";
 import { ItemListContainer } from "./components/Items/ItemListContainer";
+import { ItemDetailContainer } from "./components/Items/ItemDetailContainer"
 
 function App() {
   return (
     <div className="app gfonts">
       <Navbar />
-      <ItemListContainer item={"PS4 500GB $15.000,00"}/>
+      <ItemDetailContainer />
+      <ItemListContainer />
     </div>
   );
 }
