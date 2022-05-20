@@ -10,6 +10,13 @@ body{
     color: white;
     background-color: black;
 }
+.home{
+    &__title{
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
 .header{
     display: flex;
     flex-wrap: wrap;
@@ -48,29 +55,32 @@ body{
         margin: 10px;
         &__itemCount{
             font-weight: bold;
-            margin: 1rem;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
             &--input{
                 font-weight: bold;
                 border: 1px solid black;
                 border-radius: 5px;
                 padding: 0px 3px 0px 3px;
-                margin: 0px 5px 0px 5px;
+                margin: 0px 3px 0px 3px;
             }
         }
         &__title{
             font-weight: bold;
-            margin-left: 1rem;
+            margin-top: 1rem;
             text-align: center;
         }
         &__items{
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+            gap: 1rem;
+            margin: 1rem;
             &--card{
-                margin: 1rem;
+                margin: 0;
                 justify-content: center;
                 &Img{
-                    min-height: 13rem;
-                    max-height: 13rem;
+                    width: 100%;
+                    margin-bottom: 0.5rem;
                 }
             }
         }
@@ -82,5 +92,8 @@ body{
     &__img{
         max-height: 30rem;
         max-width: 30rem;
+    }
+    &__home{
+        margin-bottom: 1rem;
     }
 }

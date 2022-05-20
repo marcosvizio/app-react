@@ -1,27 +1,27 @@
 import React from 'react'
-import { Products } from '../../data/Products'
+import { getProducts } from '../../Mocks/getProducts'
 import { ItemDetail } from './ItemDetail'
+import { useParams } from 'react-router-dom'
 
 export const ItemDetailContainer = () => {
 
     const [item,setItem] = React.useState([])
+    const [loading, setLoading] = React.useState(false)
+    const {id} = useParams()
 
-    const getItem = new Promise ((resolve,reject)=>{
-        let condition = true
-        setTimeout(()=>{
-            if (condition) {
-                resolve(Products)
-            }else{
-                reject("Algo salio mal! En ItemDetailContainer")
-            }
-        }, 3000)
-    }).then(()=>{
-        setItem(Products[3])
-    })
+    React.useEffect(()=> {
+        setLoading(true)
+        getProducts
+        .then((res)=> setItem(res.find((item)=> item.id === id)))
+        .catch((error)=> console.log(error))
+        .finally(()=> setLoading(false))
+    }, [])
+
+    
 
   return (
     <div>
-        <ItemDetail item={item}/>
+        {loading ? <p>Loading...</p> : <ItemDetail item={item}/>}
     </div>
   )
 }

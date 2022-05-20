@@ -1,43 +1,32 @@
 import React from 'react'
-import { Products } from '../../data/Products'
 import { ItemList } from './ItemList'
-import { ItemCount } from './ItemCount'
+import { getProducts } from '../../Mocks/getProducts'
+import { useParams } from 'react-router-dom'
 
 export const ItemListContainer = () => {
   
   const [listProducts,setListProducts] = React.useState([])
+  const [loading, setLoading] = React.useState(false)
+  const { categoryId } = useParams()
 
-  const loadingItem = new Promise ((resolve,reject) => {
-    let condition = true
-    setTimeout(()=> {
-      if (condition) { 
-        resolve(Products)
+
+  React.useEffect(()=> {
+    setLoading(true)
+    getProducts
+    .then((res)=> {
+      if(!categoryId){
+        setListProducts(res)
       }else{
-        reject("Algo salio mal! En ItemListContainer")
+        setListProducts(res.filter((prod)=> prod.category === categoryId))
       }
-    }, 3000)
-  })
-
-  loadingItem.then((result)=>{
-    console.log(result);
-  }).catch((err)=>{
-    console.log(err)
-  })
-
-  React.useEffect(()=>{
-    loadingItem
-    .then((res)=> setListProducts(res))
+    })
     .catch((error)=> console.log(error))
-  }, [])
+    .finally(()=> setLoading(false))
+  }, [categoryId])
 
   return (
-    <>
-      <div>
-        <ItemCount stock={10} initial={2} />
-      </div>
-      <div>
-        <ItemList listProducts={listProducts} />
-      </div>
-    </>
+    <div>
+      {loading ? <p>Loading...</p> : <ItemList listProducts={listProducts} />}
+    </div>
   )
 }
