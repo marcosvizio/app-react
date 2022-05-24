@@ -5,13 +5,15 @@
           box-sizing: border-box;
 }
 
-.gfonts {
+@font-face {
   font-family: 'Exo 2', sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
 }
 
 body {
   color: white;
-  background-color: black;
+  background: black;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .home__title {
@@ -79,20 +81,6 @@ body {
   margin: 10px;
 }
 
-.itemListContainer__itemCount {
-  font-weight: bold;
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-}
-
-.itemListContainer__itemCount--input {
-  font-weight: bold;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 0px 3px 0px 3px;
-  margin: 0px 3px 0px 3px;
-}
-
 .itemListContainer__title {
   font-weight: bold;
   margin-top: 1rem;
@@ -131,6 +119,19 @@ body {
   margin: 1rem;
 }
 
+.itemDetail__itemCount {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.itemDetail__itemCount--input {
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0px 5px 10px 5px;
+}
+
 .itemDetail__img {
   max-height: 30rem;
   max-width: 30rem;
@@ -138,5 +139,9 @@ body {
 
 .itemDetail__home {
   margin-bottom: 1rem;
+}
+
+.itemDetail__cartButton {
+  margin-right: 8px;
 }
 /*# sourceMappingURL=style.css.map */

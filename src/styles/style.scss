@@ -3,12 +3,14 @@
     padding: 0px;
     box-sizing: border-box;
 }
-.gfonts{
+@font-face {
     font-family: 'Exo 2', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
 }
 body{
     color: white;
-    background-color: black;
+    background: black;
+    font-family: 'Exo 2', sans-serif;
 }
 .home{
     &__title{
@@ -53,18 +55,6 @@ body{
 .itemListContainer{
         font-size: 1.5rem;
         margin: 10px;
-        &__itemCount{
-            font-weight: bold;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            &--input{
-                font-weight: bold;
-                border: 1px solid black;
-                border-radius: 5px;
-                padding: 0px 3px 0px 3px;
-                margin: 0px 3px 0px 3px;
-            }
-        }
         &__title{
             font-weight: bold;
             margin-top: 1rem;
@@ -89,11 +79,25 @@ body{
     display: flex;
     flex-direction: row !important;
     margin: 1rem;
+    &__itemCount{
+        font-weight: bold;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        &--input{
+            font-weight: bold;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 0px 5px 10px 5px
+        }
+    }
     &__img{
         max-height: 30rem;
         max-width: 30rem;
     }
     &__home{
         margin-bottom: 1rem;
+    }
+    &__cartButton{
+        margin-right: 8px;
     }
 }

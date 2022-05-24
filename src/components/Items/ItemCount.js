@@ -1,22 +1,37 @@
 import React from 'react'
+import { Button } from 'react-bootstrap'
 
-export const ItemCount = ({initial, stock}) => {
-    const [count,setCount] = React.useState(initial)
-    const handleRest = () => {
+export const ItemCount = ({count, setCount, stock, onAdd}) => {
+    
+    const countDecreased = () => {
         if (count > 0) {
             setCount(count - 1)
         }
     }
-    const handlePlus = () => {
+
+    const countPlus = () => {
         if (count < stock) {
             setCount(count + 1)
-        } 
+        }
     }
+
+    /* ------------------------ Maquetamos los botones que necesitemos ------------------------ */
+
+    const StockButton = ({handleOnClick, text}) => {
+        return <Button className='itemDetail__itemCount--input' onClick={() => handleOnClick()}>{text}</Button>
+    }
+
+    const AddButton = () => {
+        return <Button variant='success' onClick={onAdd}>Agregar al Carrito</Button>
+    }
+
   return (
-    <div className='itemListContainer__itemCount'>
-        <input type="button" value="+" className='itemListContainer__itemCount--input' onClick={handlePlus}></input>
+    <div className='itemDetail__itemCount'>
+        <StockButton text='+' handleOnClick={countPlus} />
         {count}
-        <input type="button" value="-" className='itemListContainer__itemCount--input' onClick={handleRest}></input>
+        <StockButton text='-' handleOnClick={countDecreased} />
+        <br/>
+        <AddButton />
     </div>
   )
 }
