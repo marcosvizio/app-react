@@ -21,8 +21,8 @@ export const ItemCount = ({count, setCount, stock, onAdd}) => {
         return <Button className='itemDetail__itemCount--input' onClick={() => handleOnClick()}>{text}</Button>
     }
 
-    const AddButton = () => {
-        return <Button variant='success' onClick={onAdd}>Agregar al Carrito</Button>
+    const AddButton = ({handleOnSubmit}) => {
+        return <Button variant='success' onClick={() => handleOnSubmit()}>Agregar al Carrito</Button>
     }
 
   return (
@@ -31,7 +31,7 @@ export const ItemCount = ({count, setCount, stock, onAdd}) => {
         {count}
         <StockButton text='-' handleOnClick={countDecreased} />
         <br/>
-        <AddButton />
+        <AddButton handleOnSubmit={onAdd} />
     </div>
   )
 }

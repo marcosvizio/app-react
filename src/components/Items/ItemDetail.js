@@ -10,7 +10,7 @@ export const ItemDetail = ({item}) => {
   const [buy, setBuy] = React.useState(false)
 
   const onAdd = () => {
-    setBuy(true)
+    setBuy(true)  
   }
 
   const navigate = useNavigate()

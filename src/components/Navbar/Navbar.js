@@ -19,7 +19,7 @@ export default function Navbar() {
               </NavDropdown>
               <li><Link to='/' className="header__items--ulLink">Nosotros</Link></li>
             </ul>
-            <CartWidget count="1"/>
+            <CartWidget />
           </div>
       </header>
     )

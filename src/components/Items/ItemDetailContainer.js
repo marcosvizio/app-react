@@ -17,8 +17,6 @@ export const ItemDetailContainer = () => {
         .finally(()=> setLoading(false))
     }, [])
 
-    
-
   return (
     <div>
         {loading ? <p>Loading...</p> : <ItemDetail item={item}/>}
