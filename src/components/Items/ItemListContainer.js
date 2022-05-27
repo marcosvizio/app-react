@@ -1,6 +1,6 @@
 import React from 'react'
 import { ItemList } from './ItemList'
-import { getProducts } from '../../Mocks/getProducts'
+import { getProducts } from '../../mocks/getProducts'
 import { useParams } from 'react-router-dom'
 
 export const ItemListContainer = () => {

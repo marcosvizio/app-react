@@ -49,6 +49,18 @@ body{
             margin-left: 2rem;
             cursor: pointer;
             color: white;
+            &__count{
+                color: black;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: white;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                margin-left: 0.25rem;
+            }
         }
     }
 }

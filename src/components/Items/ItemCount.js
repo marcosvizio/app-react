@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 
-export const ItemCount = ({count, setCount, stock, onAdd}) => {
+export const ItemCount = ({count, setCount, stock, onSubmit}) => {
     
     const countDecreased = () => {
         if (count > 0) {
@@ -15,14 +15,12 @@ export const ItemCount = ({count, setCount, stock, onAdd}) => {
         }
     }
 
-    /* ------------------------ Maquetamos los botones que necesitemos ------------------------ */
-
     const StockButton = ({handleOnClick, text}) => {
         return <Button className='itemDetail__itemCount--input' onClick={() => handleOnClick()}>{text}</Button>
     }
 
     const AddButton = ({handleOnSubmit}) => {
-        return <Button variant='success' onClick={() => handleOnSubmit()}>Agregar al Carrito</Button>
+        return <Button variant='success' onClick={()=>handleOnSubmit()}>Agregar al Carrito</Button>
     }
 
   return (
@@ -31,7 +29,7 @@ export const ItemCount = ({count, setCount, stock, onAdd}) => {
         {count}
         <StockButton text='-' handleOnClick={countDecreased} />
         <br/>
-        <AddButton handleOnSubmit={onAdd} />
+        <AddButton handleOnSubmit={onSubmit} />
     </div>
   )
 }

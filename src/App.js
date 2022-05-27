@@ -1,16 +1,16 @@
-import  Navbar  from "./components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
+import  Navbar  from "./components/Navbar/Navbar";
 import { Home } from './views/Home/Home';
 import { Products } from "./views/Products/Products";
 import { Product } from "./views/Product/Product";
 import { Cart } from "./views/Cart/Cart";
-import { CartProvider } from './components/CartContext/CartContext';
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar/>
       <CartProvider>
+      <Navbar/>
         <Routes>
           <Route exact path="/" element={<Home/>} />
           <Route exact path='/products' element={<Products/>} />

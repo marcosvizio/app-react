@@ -2,16 +2,13 @@ import React from 'react'
 import { Card,Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import { ItemCount } from './ItemCount'
+import { CartContext } from '../../context/CartContext'
 
 export const ItemDetail = ({item}) => {
 
   const [count, setCount] = React.useState(1)
 
-  const [buy, setBuy] = React.useState(false)
-
-  const onAdd = () => {
-    setBuy(true)  
-  }
+  const {addItem, isInCart} = React.useContext(CartContext)
 
   const navigate = useNavigate()
 
@@ -24,12 +21,14 @@ export const ItemDetail = ({item}) => {
             <Card.Text>{item.description}</Card.Text>
             <Card.Text>Precio: ${item.price}</Card.Text>
             <Card.Text>Stock disponible: {item.stock}</Card.Text>
-            {buy ? 
+            {isInCart(item.id) ? (
             <div>
               <Button variant='success' className='itemDetail__cartButton' onClick={()=>navigate('/cart')}>Ir al Carrito</Button>
               <Button variant='warning' onClick={()=>navigate('/products')}>Seguir Comprando</Button>
-            </div> 
-            : <ItemCount count={count} setCount={setCount} stock={item.stock} onAdd={onAdd} />}
+            </div>
+            ):(
+              <ItemCount count={count} setCount={setCount} stock={item.stock} onSubmit={()=> addItem(item, count)} />
+            )}
         </Card.Body>
     </Card>
   )

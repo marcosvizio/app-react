@@ -1,5 +1,5 @@
 import React from 'react'
-import { getProducts } from '../../Mocks/getProducts'
+import { getProducts } from '../../mocks/getProducts'
 import { ItemDetail } from './ItemDetail'
 import { useParams } from 'react-router-dom'
 
