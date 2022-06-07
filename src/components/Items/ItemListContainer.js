@@ -6,23 +6,28 @@ import { useParams } from 'react-router-dom'
 export const ItemListContainer = () => {
   
   const [listProducts,setListProducts] = React.useState([])
-  const [loading, setLoading] = React.useState(false)
+  const [loading, setLoading] = React.useState(true)
   const { categoryId } = useParams()
 
 
   React.useEffect(()=> {
-    setLoading(true)
     getProducts
     .then((res)=> {
       if(!categoryId){
+        setTimeout(()=> {
+          setLoading(false)
+          }, 3000)
         setListProducts(res)
       }else{
-        setListProducts(res.filter((prod)=> prod.category === categoryId))
+        setTimeout(()=> {
+          setLoading(false)
+          }, 3000)
+        setListProducts(res.filter(item => item.category === categoryId))
       }
     })
     .catch((error)=> console.log(error))
     .finally(()=> setLoading(false))
-  }, [categoryId])
+  }, [categoryId, loading])
 
   return (
     <div>

@@ -163,4 +163,31 @@ body {
 .itemDetail__cartButton {
   margin-right: 8px;
 }
+
+.cartItem__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cartItem__btn--quantity {
+  font-size: 1rem !important;
+}
+
+.cartItem__btn--trash {
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.cart__btn {
+  margin: 0.5rem;
+}
+
+.cart__total {
+  margin: 0.5rem;
+}
 /*# sourceMappingURL=style.css.map */

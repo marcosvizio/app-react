@@ -21,13 +21,13 @@ export const ItemDetail = ({item}) => {
             <Card.Text>{item.description}</Card.Text>
             <Card.Text>Precio: ${item.price}</Card.Text>
             <Card.Text>Stock disponible: {item.stock}</Card.Text>
-            {isInCart(item.id) ? (
-            <div>
+            {!isInCart(item.id) ? (
+              <ItemCount count={count} setCount={setCount} stock={item.stock} onSubmit={()=> addItem(item, count)} />
+            ):(
+              <div>
               <Button variant='success' className='itemDetail__cartButton' onClick={()=>navigate('/cart')}>Ir al Carrito</Button>
               <Button variant='warning' onClick={()=>navigate('/products')}>Seguir Comprando</Button>
-            </div>
-            ):(
-              <ItemCount count={count} setCount={setCount} stock={item.stock} onSubmit={()=> addItem(item, count)} />
+              </div>
             )}
         </Card.Body>
     </Card>

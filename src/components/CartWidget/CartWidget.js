@@ -11,7 +11,9 @@ export const CartWidget = () => {
     <div className='header__items--cart'>
       <Link to='/cart'>
         <box-icon name='cart' color='#f4f4f4' />
-        <span className='header__items--cart__count'>{cart.length}</span>
+        <span className='header__items--cart__count'>{
+          cart.map(item => item.quantity).reduce((a, b) => a + b, 0)
+        }</span>
       </Link> 
     </div>
   )

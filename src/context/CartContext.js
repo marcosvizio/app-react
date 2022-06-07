@@ -25,6 +25,9 @@ const CartProvider = ({children}) => {
         const newCart = cart.filter((prodCart) => {
             if(prodCart.id !== id){
                 prodCart.quantity--
+                if(prodCart.quantity === 0){
+                    return false
+                }
             }
             return prodCart
         })
@@ -38,8 +41,6 @@ const CartProvider = ({children}) => {
     const isInCart = (id) => {
         return cart.find(item => item.id === id)
     }
-
-    console.log(cart);
     
     return(
         <Provider value={{
