@@ -1,5 +1,6 @@
 import React from 'react'
-import { ItemListContainer } from '../../components/Items/ItemListContainer'
+import { ItemListContainer } from '../../components/ItemListContainer/ItemListContainer'
+
 
 export const Products = () => {
   return (

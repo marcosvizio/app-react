@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card,Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import { ItemCount } from './ItemCount'
+import { ItemCount } from '../ItemCount/ItemCount'
 import { CartContext } from '../../context/CartContext'
 
 export const ItemDetail = ({item}) => {
