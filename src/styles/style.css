@@ -190,4 +190,28 @@ body {
 .cart__total {
   margin: 0.5rem;
 }
+
+.form {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form__title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.form__group {
+  display: -ms-grid;
+  display: grid;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.form__group--label {
+  font-size: 1.3rem;
+}
 /*# sourceMappingURL=style.css.map */

@@ -5,6 +5,7 @@ import { Home } from './views/Home/Home';
 import { Products } from "./views/Products/Products";
 import { Product } from "./views/Product/Product";
 import { Cart } from './components/Cart/Cart';
+import { CheckOut } from './views/CheckOut/CheckOut';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path='/cart' element={<Cart/>} />
           <Route exact path='/category/:categoryId' element={<Products/>} />
           <Route exact path='/detail/:id' element={<Product/>} />
+          <Route exact path='/checkout' element={<CheckOut/>} />
         </Routes>
       </CartProvider>
     </BrowserRouter>

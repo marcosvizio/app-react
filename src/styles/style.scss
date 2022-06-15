@@ -132,3 +132,19 @@ body{
         margin: 0.5rem;
     }
 }
+.form{
+    display: grid;
+    justify-content: center;
+    &__title{
+        text-align: center;
+        font-weight: bold;
+    }
+    &__group{
+        display: grid;
+        gap: 0.8rem;
+        margin-bottom: 0.8rem;
+        &--label{
+            font-size: 1.3rem;
+        }
+    }
+}
