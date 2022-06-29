@@ -2,7 +2,7 @@ import { CartWidget } from "../CartWidget/CartWidget"
 import { Link } from "react-router-dom"
 import { NavDropdown } from "react-bootstrap"
 
-export default function Navbar() {
+export default function NavBar() {
 
     return (
       <header className="header">

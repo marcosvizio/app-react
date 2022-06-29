@@ -1,6 +1,6 @@
 import React from 'react'
 import { CartContext } from '../../context/CartContext'
-import { collection, getFirestore, addDoc } from 'firebase/firestore'
+import { collection, getFirestore, addDoc, runTransaction, doc } from 'firebase/firestore'
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
 
@@ -18,7 +18,7 @@ export const CartCheckOut = () => {
     setData({...data, [name]: value})
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const order = {
       buyer: data,
@@ -27,18 +27,16 @@ export const CartCheckOut = () => {
         return {
           id: item.id,
           quantity: item.quantity,
-          title: item.title,
-          price: item.price
+          price: item.price,
+          title: item.title
           }
-        }
-      )
-    }
+        })
+      }
       
     const db = getFirestore();
-
     const ordersCollection = collection(db, 'orders');
 
-    addDoc(ordersCollection, order).then(({ id }) => {
+    await addDoc(ordersCollection, order).then(({ id }) => {
       setOrderId(id);
       Swal.fire(
         'Compra Realizada!',
@@ -46,6 +44,20 @@ export const CartCheckOut = () => {
         'success'
       );
       navigate('/');
+      updateProducts();
+      clear();
+    });
+  }
+
+  const updateProducts = async () => {
+    const db = getFirestore ()
+    cart.forEach( async (item) => {
+      const productRef = doc(db, `products`, item.id)
+      await runTransaction(db, async (transaction) => {
+      const transfDoc = await transaction.get(productRef);
+      const newStock = transfDoc.data().stock - item.quantity;
+      transaction.update(productRef, { stock: newStock });
+      });
     });
   }
 
@@ -68,7 +80,7 @@ export const CartCheckOut = () => {
         <label className='form__group--label'>Ingrese su correo electrónico:</label>
         <input type='email' name='email' placeholder='Correo electrónico' onChange={handleChange} required/>
       </div>
-      <button type='submit' className='btn btn-success form__btn' onClick={clear}>Finalizar Compra</button>
+      <button type='submit' className='btn btn-success form__btn'>Finalizar Compra</button>
     </form>
   )
 }
