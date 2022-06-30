@@ -9,14 +9,22 @@
 }
 body{
     color: white;
-    background: black;
     font-family: 'Exo 2', sans-serif;
 }
-.home{
-    &__title{
-        display: flex;
-        justify-content: center;
-        margin-top: 1rem;
+.carousel__home{
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--textBlack{
+        font-size: 1.5rem;  
+        color: black;
+    }
+    &--textWhite{
+        font-size: 1.5rem;  
+        color: white;
     }
 }
 .header{
@@ -24,7 +32,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    background: black;
+    background: rgb(42, 42, 42);
     padding: 20px;
     position: sticky;
     z-index: 999;
@@ -32,7 +40,10 @@ body{
     &__logo{
         color : white;
         text-decoration: none;
-    };
+    }
+    &__logo:hover{
+        color:rgb(130, 252, 0)
+    }
     &__items{
         display: flex;
         &--ul{
@@ -43,6 +54,9 @@ body{
                 text-decoration: none;
                 color: white;
                 margin-right: 1rem;
+            }
+            &Link:hover{
+                color:rgb(130, 252, 0);
             }
         }
         &--cart{
@@ -64,19 +78,22 @@ body{
         }
     }
 }
+.listaProductos{
+    background-color: rgb(42, 42, 42);
+}
 .itemListContainer{
         font-size: 1.5rem;
         margin: 10px;
         &__title{
             font-weight: bold;
-            margin-top: 1rem;
             text-align: center;
+            color: rgb(130, 252, 0);
         }
         &__items{
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, auto));
             gap: 1rem;
-            margin: 1rem;
+            margin: 0rem 1rem 0rem 1rem;
             &--card{
                 margin: 0;
                 justify-content: center;
@@ -146,5 +163,43 @@ body{
         &--label{
             font-size: 1.3rem;
         }
+    }
+}
+.footer{
+    display: flex;
+    background-color: rgb(42, 42, 42);
+    justify-content: space-around;
+    top: 0;
+    &__title{
+        color: rgb(130, 252, 0);
+        margin: 1rem 0rem 1rem 0rem
+    }
+    &__ul{
+        padding: 0rem;
+    }
+    &__li{
+        list-style: none;
+        margin: 0rem 0rem 0.5rem 0rem;
+        &--link{
+            font-size: 1rem;
+            color: white;
+        }
+        &--link:hover{
+            color: rgb(130, 252, 0);
+        }
+    }
+    &__logo{
+        width: 50px;
+        height: 50px;
+    }
+    &__maps{
+        width: 15rem;
+        height: 15rem;
+    }
+}
+.categories{
+    &__ul{
+        list-style: none;
+        
     }
 }

@@ -17,7 +17,6 @@ export default function NavBar() {
                 <li><Link to='/category/perifericos' className="dropdown-item">Elementos de PC</Link></li>
                 <li><Link to='/category/notebooks' className="dropdown-item">Notebooks</Link></li>
               </NavDropdown>
-              <li><Link to='/' className="header__items--ulLink">Nosotros</Link></li>
             </ul>
             <CartWidget />
           </div>

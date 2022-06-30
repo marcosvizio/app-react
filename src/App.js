@@ -6,6 +6,7 @@ import { Products } from "./views/Products/Products";
 import { Product } from "./views/Product/Product";
 import { Cart } from './components/Cart/Cart';
 import { CheckOut } from './views/CheckOut/CheckOut';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/detail/:id' element={<Product/>} />
           <Route exact path='/checkout' element={<CheckOut/>} />
         </Routes>
+      <Footer/>
       </CartProvider>
     </BrowserRouter>
   );

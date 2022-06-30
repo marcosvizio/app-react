@@ -28,7 +28,7 @@ export const ItemListContainer = () => {
   }, [loading, categoryId])
 
   return (
-    <div>
+    <div className='listaProductos'>
       {loading ? <p>Loading...</p> : <ItemList listProducts={listProducts} />}
     </div>
   )
