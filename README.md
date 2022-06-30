@@ -16,17 +16,17 @@ Para ver el proyecto a traves de VERCEL desde [acá](https://risk-store.vercel.a
 
 Para poder funcionar correctamente deberá [npm](https://www.npmjs.com/) para instalar el proyecto.
 
-´´´bash
+```bash
 npm install
-´´´
+```
 
 ## Corriendo el proyecto 
 
 Para inicializar el proyecto una vez instaladas las dependencias con el paso anterior, correr el siguiente comando en la consola.
 
-´´´bash
+```bash
 npm start
-´´´
+```
 
 ## Librerias utilizadas
 
