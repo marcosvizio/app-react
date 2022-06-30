@@ -3,7 +3,7 @@ import { CartWidget } from "../CartWidget/CartWidget"
 import { Link } from "react-router-dom"
 import { NavDropdown } from "react-bootstrap"
 
-export const NavBar = () => {
+export const Navbar = () => {
   return (
     <header className="header">
           <div>
