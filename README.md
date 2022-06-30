@@ -1,10 +1,8 @@
-# Getting Started with Create React App
+# App ECommerce Risk Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
 
-## Available Scripts
-
-In the project directory, you can run:
+Este es un proyecto personal enfocado en el aprendizaje de React JS, la tienda esta destinada a la compra de articulos electronicos y tecnologicos.
 
 ### `npm start`
 
