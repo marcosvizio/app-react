@@ -1,10 +1,11 @@
+import React from 'react'
 import { CartWidget } from "../CartWidget/CartWidget"
 import { Link } from "react-router-dom"
 import { NavDropdown } from "react-bootstrap"
 
 export const NavBar = () => {
-    return (
-      <header className="header">
+  return (
+    <header className="header">
           <div>
             <h2><Link to='/' className="header__logo">RISK STORE</Link></h2>
           </div>
@@ -20,5 +21,5 @@ export const NavBar = () => {
             <CartWidget />
           </div>
       </header>
-    )
+  )
 }
