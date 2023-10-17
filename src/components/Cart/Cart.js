@@ -24,7 +24,7 @@ export const Cart = () => {
     </div>)
     : 
     (<div>
-      <h4 className='cart__btn'>Tu Carrito esta vacio!</h4>
+      <h4 className='cart__btn'>Tu carrito esta vacio!</h4>
       <Button className='cart__btn' onClick={()=>navigate(`/products`)} variant='warning'>Ir a Productos</Button>
     </div>)}
     </>

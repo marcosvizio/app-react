@@ -7,8 +7,8 @@ export const CarouselHome = () => {
       <Carousel.Item>
         <img className="d-block w-100 carousel__home" src="https://i.pinimg.com/564x/37/8c/d4/378cd4ea61758d6e802d4612b9c76583.jpg" alt="Todo en Tecnologia" />
         <Carousel.Caption>
-          <h3 className='carousel__home--textBlack'>Bienvenido a RISK STORE</h3>
-          <p className='carousel__home--textBlack'>Somos la tienda tecnologica lider de toda latinoamerica, en que podemos ayudarte?</p>
+          <h3 className='carousel__home--textBlack'>Bienvenido a MAX COMPUTER</h3>
+          <p className='carousel__home--textBlack'>Somos la tienda tecnologica de siempre pero ahora en internet, en que podemos ayudarte?</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>

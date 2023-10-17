@@ -7,6 +7,7 @@ const Footer = () => {
         <h4 className="footer__title">Categorias</h4>
         <ul className="footer__ul">
           <li className="footer__li"><Link to='/products' className="footer__li--link">Todos los productos</Link></li>
+          <li className="footer__li"><Link to='/category/pcs' className="footer__li--link">PC's armadas</Link></li>
           <li className="footer__li"><Link to='/category/notebooks' className="footer__li--link">Notebooks</Link></li>
           <li className="footer__li"><Link to='/category/perifericos' className="footer__li--link">Perifericos</Link></li>
         </ul>
