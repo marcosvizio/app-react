@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../../img/Asset1.png'
 import { CartWidget } from "../CartWidget/CartWidget"
 import { Link } from "react-router-dom"
 import { NavDropdown } from "react-bootstrap"
@@ -7,7 +8,7 @@ export const Navbar = () => {
   return (
     <header className="header">
           <div>
-            <h2><Link to='/' className="header__logo">MAX COMPUTER</Link></h2>
+            <Link to='/' className="header__logo"><img src={logo} alt="Logo Max Computer" className="header__logo--img"></img></Link>
           </div>
           <div className="header__items">
             <ul className="header__items--ul">
